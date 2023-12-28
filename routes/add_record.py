@@ -17,7 +17,6 @@ def add_record(req):
     connection = sqlite3.connect('database.db')
     cursor = connection.cursor()
 
-    # Создаем таблицу Users
     cursor.execute(f'''INSERT INTO records(id, body) VALUES ({record_id}, '{body}')''')
 
     connection.commit()
